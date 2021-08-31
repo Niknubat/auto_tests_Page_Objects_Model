@@ -6,13 +6,5 @@ class MainPageLocators():
 
 
 class LoginPageLocators():
-    LOGIN_FORM = (By.ID, "#login_form")
-    LOGIN_USERNAME = (By.NAME, "login-username")
-    LOGIN_PASSWORD = (By.NAME, "login-password")
-    LOGIN_SUBMIT = (By.NAME, "login_submit")
-
-    REGISTER_FORM = (By.ID, "#register_form")
-    REGISTRATION_EMAIL = (By.NAME, "registration-email")
-    REGISTRATION_PASSWORD_1 = (By.NAME, "registration-password1")
-    REGISTRATION_PASSWORD_2 = (By.NAME, "registration-password2")
-    REGISTRATION_SUBMIT = (By.NAME, "registration_submit")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")

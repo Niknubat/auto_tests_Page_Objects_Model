@@ -19,10 +19,9 @@ def test_guest_should_see_login_link(browser):
 
 
 def test_presence_authorization_and_registration_forms(browser):
-    # browser.test_guest_should_see_login_link()
-    link = "http://selenium1py.pythonanywhere.com/"
+    link = "http://selenium1py.pythonanywhere.com"
     page = MainPage(browser, link)
     page.open()
-    page.should_be_login_link()
-    page = LoginPage(browser)
-    page.should_be_login_url()
+    page.go_to_login_page()
+    login_page = LoginPage(browser, browser.current_url)
+    login_page.should_be_login_page()
